@@ -1,4 +1,5 @@
 
+
 from __future__ import division, print_function
 # coding=utf-8
 import sys
@@ -6,6 +7,7 @@ import os
 import glob
 import re
 import numpy as np
+import pandas as pd
 import text_hammer as th
 
 # Keras
@@ -27,13 +29,14 @@ from gevent.pywsgi import WSGIServer
 app = Flask(__name__)
 
 # Model saved with Keras model.save()
-MODEL_PATH = 'Models/Emotion_Detection.h5'
+MODEL_PATH = 'Models/Emotion_Detection_updated.h5'
 
 # Load your trained model
 model = load_model(MODEL_PATH)
      
 #print('Model loaded. Check http://127.0.0.1:5000/')
 
+df = pd.read_csv('format_data_f.csv', header=None, sep = ';', names = ['Input','Sentiment'] , encoding = 'utf-8')
 
 @app.route('/', methods=['GET','POST'])
 def index():
@@ -43,22 +46,28 @@ def index():
 @app.route('/predict',methods=['GET','POST'])
 def predict():
     if request.method == 'POST':
-        
+        print('inside')
         def get_key(value):
             dictionary={'joy':0,'anger':1,'love':2,'sadness':3,'fear':4,'surprise':5}
-            for key,val in dictionary.items():
-                if (val==value):
+            for key , val in dictionary.items():
+                if (val == value):
                     return key
-        
+            
         num_words = 5000 
         tokenizer = Tokenizer( num_words , lower=True )
+        tokenizer.fit_on_texts(df['Input'])
 
         message = request.form['message']
+        print(message)
 
         sentence_lst = []
         sentence_lst.append(message)
+
+        #tokenizer.fit_on_texts(message)
+        
         sentence_seq = tokenizer.texts_to_sequences(sentence_lst)
-        sentence_padded = pad_sequences(sentence_seq,maxlen=300,padding='post')
+        print(sentence_seq)
+        sentence_padded = pad_sequences(sentence_seq, maxlen=100, padding='post')
         my_prediction = get_key(model.predict_classes(sentence_padded))
         
         #my_prediction = model.predict(data_pad)
