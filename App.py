@@ -40,7 +40,7 @@ def index():
     # Main page
     return render_template('Home.html')
 
-@app.route('/predict',methods=['POST'])
+@app.route('/predict',methods=['GET','POST'])
 def predict():
     if request.method == 'POST':
         
