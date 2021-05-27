@@ -15,7 +15,7 @@ from keras.layers.embeddings import Embedding
 import keras.backend as K
 from keras.preprocessing.sequence import pad_sequences
 from keras.utils.np_utils import to_categorical
-from keras.preprocessing.text import Tokenizer
+#from keras.preprocessing.text import Tokenizer
 from keras.models import load_model
 
 # Flask utils
@@ -38,32 +38,19 @@ model = load_model(MODEL_PATH)
 @app.route('/', methods=['GET'])
 def index():
     # Main page
-    return render_template('home.html')
+    return render_template('Home.html')
 
-@app.route('/predict',methods=['GET','POST'])
+@app.route('/predict',methods=['POST'])
 def predict():
     if request.method == 'POST':
-        
-        def get_key(value):
-            dictionary={'joy':0,'anger':1,'love':2,'sadness':3,'fear':4,'surprise':5}
-            for key,val in dictionary.items():
-                if (val==value):
-                    return key
-        
-        num_words = 5000 
-        tokenizer = Tokenizer( num_words , lower=True )
-
         message = request.form['message']
-
-        sentence_lst = []
-        sentence_lst.append(message)
-        sentence_seq = tokenizer.texts_to_sequences(sentence_lst)
-        sentence_padded = pad_sequences(sentence_seq,maxlen=300,padding='post')
-        my_prediction = get_key(model.predict_classes(sentence_padded))
+        data = [message]
+         
+        #data = tokenizer.texts_to_sequences(data)
+        data = pad_sequences(data , maxlen = 100, padding = 'post')
+        my_prediction = model.predict(vect)
         
-        #my_prediction = model.predict(data_pad)
-        
-        return render_template('result.html', prediction = my_prediction)
+        return render_template('Home.html',prediction = my_prediction)
 
 
 if __name__ == '__main__':

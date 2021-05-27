@@ -33665,63 +33665,11 @@ a.u-link.u-text-hover-grey-90:hover {
 
 
 /*end-variables sitestylecss*/
-.u-header {
-  background-image: none;
-  min-height: 94px;
-}
 
-.u-header .u-image-1 {
-  margin: 0 auto 0 0;
-}
 
-.u-header .u-logo-image-1 {
-  max-width: 167px;
-  max-height: 167px;
-}
 
-.u-header .u-menu-1 {
-  margin: -36px auto 0 calc(((100% - 1140px) / 2) + 87px);
-}
 
-.u-header .u-nav-1 {
-  font-size: 1rem;
-  letter-spacing: 0px;
-}
 
-.u-header .u-nav-2 {
-  font-size: 1.25rem;
-}
-@media (max-width: 1199px) {
-  .u-header .u-image-1 {
-    width: 64px;
-    height: 32px;
-  }
-
-  .u-header .u-menu-1 {
-    width: auto;
-    margin-top: -36px;
-    margin-left: calc(((100% - 940px) / 2) + 87px);
-  }
-}
-@media (max-width: 991px) {
-  .u-header .u-menu-1 {
-    margin-left: calc(((100% - 720px) / 2) + 87px);
-  }
-}
-@media (max-width: 767px) {
-  .u-header .u-image-1 {
-    width: auto;
-  }
-
-  .u-header .u-menu-1 {
-    margin-left: calc(((100% - 540px) / 2) + 87px);
-  }
-}
-@media (max-width: 575px) {
-  .u-header .u-menu-1 {
-    margin-left: calc(((100% - 340px) / 2) + 87px);
-  }
-}
 .u-footer .u-sheet-1 {
   min-height: 119px;
 }
