@@ -15,7 +15,7 @@ from keras.layers.embeddings import Embedding
 import keras.backend as K
 from keras.preprocessing.sequence import pad_sequences
 from keras.utils.np_utils import to_categorical
-#from keras.preprocessing.text import Tokenizer
+from keras.preprocessing.text import Tokenizer
 from keras.models import load_model
 
 # Flask utils
