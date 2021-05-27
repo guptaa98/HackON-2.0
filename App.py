@@ -1,4 +1,3 @@
-
 from __future__ import division, print_function
 # coding=utf-8
 import sys
@@ -15,7 +14,7 @@ from keras.layers.embeddings import Embedding
 import keras.backend as K
 from keras.preprocessing.sequence import pad_sequences
 from keras.utils.np_utils import to_categorical
-#from keras.preprocessing.text import Tokenizer
+from keras.preprocessing.text import Tokenizer
 from keras.models import load_model
 
 # Flask utils
@@ -40,10 +39,10 @@ def index():
     # Main page
     return render_template('Home.html')
 
-@app.route('/predict',methods=['GET','POST'])
+@app.route('/predict',methods=['POST'])
 def predict():
     if request.method == 'POST':
-        
+        print("inside router")
         def get_key(value):
             dictionary={'joy':0,'anger':1,'love':2,'sadness':3,'fear':4,'surprise':5}
             for key,val in dictionary.items():
@@ -54,12 +53,14 @@ def predict():
         tokenizer = Tokenizer( num_words , lower=True )
 
         message = request.form['message']
+        print( message )
 
         sentence_lst = []
         sentence_lst.append(message)
         sentence_seq = tokenizer.texts_to_sequences(sentence_lst)
         sentence_padded = pad_sequences(sentence_seq,maxlen=300,padding='post')
         my_prediction = get_key(model.predict_classes(sentence_padded))
+        print(my_prediction)
         
         #my_prediction = model.predict(data_pad)
         
