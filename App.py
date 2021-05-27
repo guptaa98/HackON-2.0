@@ -43,14 +43,27 @@ def index():
 @app.route('/predict',methods=['POST'])
 def predict():
     if request.method == 'POST':
-        message = request.form['message']
-        data = [message]
-         
-        #data = tokenizer.texts_to_sequences(data)
-        data = pad_sequences(data , maxlen = 100, padding = 'post')
-        my_prediction = model.predict(vect)
         
-        return render_template('Home.html',prediction = my_prediction)
+        def get_key(value):
+            dictionary={'joy':0,'anger':1,'love':2,'sadness':3,'fear':4,'surprise':5}
+            for key,val in dictionary.items():
+                if (val==value):
+                    return key
+        
+        num_words = 5000 
+        tokenizer = Tokenizer( num_words , lower=True )
+
+        message = request.form['message']
+
+        sentence_lst = []
+        sentence_lst.append(message)
+        sentence_seq = tokenizer.texts_to_sequences(sentence_lst)
+        sentence_padded = pad_sequences(sentence_seq,maxlen=300,padding='post')
+        my_prediction = get_key(model.predict_classes(sentence_padded))
+        
+        #my_prediction = model.predict(data_pad)
+        
+        return render_template('result.html', prediction = my_prediction)
 
 
 if __name__ == '__main__':
