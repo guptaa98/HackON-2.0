@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html style="font-size: 16px;">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="What is Group Psychotherapy?, About Us, What's your mood?">
+    <meta name="description" content="">
+    <meta name="page_type" content="np-template-header-footer-from-plugin">
+    <title>Home</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='nicepage.css') }}" media="screen">
+<link rel="stylesheet" href="{{ url_for('static', filename='Home.css') }}" media="screen">
+    <script class="u-script" type="text/javascript" src="{{ url_for('static', filename='jquery.js') }}" defer=""></script>
+    <script class="u-script" type="text/javascript" src="{{ url_for('static', filename='nicepage.js') }}" defer=""></script>
+    <meta name="generator" content="Nicepage 3.15.3, nicepage.com">
+    <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i">
+    <link id="u-page-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i">
+
+  </head>
+  <body class="u-body"><header class="u-block-39a3--Infinity u-clearfix u-header u-palette-1-light-3" id="sec-6d3f" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction=""></header>
+    <section class="u-clearfix u-palette-1-base u-section-1" id="carousel_7a0e">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <div class="u-absolute-hcenter-md u-expanded-height-lg u-expanded-height-md u-expanded-height-xl u-palette-3-base u-shape u-shape-rectangle u-shape-1"></div>
+        <img src="{{ url_for('static', filename='images/gdzrte.jpg') }}"  class="u-align-left u-image u-image-1" data-image-width="1200" data-image-height="800">
+        <div class="u-align-left u-container-style u-group u-white u-group-1">
+          <div class="u-container-layout u-container-layout-1">
+            <h2 class="u-text u-text-palette-1-base u-text-1">What is Emotion Detection?</h2>
+            <p class="u-text u-text-2">An Emotion Detection Model is an app through which we will be able to get to know about what's going on in people's minds. Our text is the direct representation of what we think and how we feel. Whenever we are stress, our text depicts that in the form of 
+              uninterestedness in talking or if we are happy we text with excitement using words of happiness. So this model will help to identify people's moods on the basis of their text. </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="u-clearfix u-section-2" id="carousel_9ded">
+      <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+        <div class="u-clearfix u-expanded-width u-gutter-0 u-layout-spacing-vertical u-layout-wrap u-layout-wrap-1">
+          <div class="u-layout">
+            <div class="u-layout-row">
+              <div class="u-size-20 u-size-60-md">
+                <div class="u-layout-row">
+                  <div class="u-container-style u-layout-cell u-left-cell u-size-60 u-layout-cell-1" src="">
+                    <div class="u-container-layout u-container-layout-1">
+                      <img class="u-expanded-width u-image u-image-1" data-image-width="700" data-image-height="763" src="{{ url_for('static', filename='images/rse.jpg') }}">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="u-size-40 u-size-60-md">
+                <div class="u-layout-col">
+                  <div class="u-size-40">
+                    <div class="u-layout-row">
+                      <div class="u-align-left u-container-style u-layout-cell u-right-cell u-size-60 u-layout-cell-2">
+                        <div class="u-container-layout u-valign-middle u-container-layout-2">
+                          <h1 class="u-text u-text-1">About Us</h1>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="u-size-20">
+                    <div class="u-layout-row">
+                      <div class="u-align-left u-container-style u-layout-cell u-size-30 u-layout-cell-3">
+                        <div class="u-container-layout u-container-layout-3">
+                          <p class="u-text u-text-2">This project is designed by 3 college students: <b>Esha Sachan, Prashasti Gupta and Ruchika Mishra</b>. Human emotion recognition plays an important role in the interpersonal relationship. Emotions are reflected from speech, hand and gestures of the body and through facial expressions. 
+                            Hence extracting and understanding of emotion has a high importance of the interaction between human and machine communication. This lead us to the idea of creating an app for emotion detection.</p>
+                        </div>
+                      </div>
+                      <div class="u-align-left u-container-style u-layout-cell u-right-cell u-size-30 u-layout-cell-4">
+                        <div class="u-container-layout u-container-layout-4">
+                          <p class="u-text u-text-3">This app can be used in real time in many ways. so hey!! Its very simple and easy to use app. Just type the text in the box and click on the Predict button and get to know about your mood.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+	<div class="ml-container">
+
+		<form action="{{ url_for('predict')}}" method="POST">
+		<p>Let's find out your mood on the basis of your text</p>
+		<!-- <input type="text" name="comment"/> -->
+		<textarea name="message" rows="6" cols="50"></textarea>
+		<br/>
+
+		<input type="submit" class="btn-info" value="predict">
+		
+	</form>
+		
+	</div>
+
+	
+	
+
+</body>
+</html>
