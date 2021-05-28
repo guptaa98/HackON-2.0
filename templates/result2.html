@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+
+	
+	<p style="color:blue;font-size:40;text-align: center;"><b>Mood of the text</b></p>
+	<div class="div-2">	
+	{% if prediction == "anger"%}
+	<h2 style="color:red;">Angry</h2>
+	<img class="u-image u-image-default u-preserve-proportions u-image-3" src="{{ url_for('static', filename='images/download10.jpg') }}" alt="" data-image-width="225" data-image-height="225">	
+	{% elif prediction == "love"%}
+	<h2 style="color:blue;">Love</h2>
+	<img class="u-image u-image-default u-preserve-proportions u-image-3" src="{{ url_for('static', filename='images/download32.jpg') }}" alt="" data-image-width="225" data-image-height="225">
+	{% elif prediction == "sadness"%}
+	<h2 style="color:red;">Sad</h2>
+	<img class="u-image u-image-default u-preserve-proportions u-image-3" src="{{ url_for('static', filename='images/download22.jpg') }}" alt="" data-image-width="225" data-image-height="225">
+    {% elif prediction == "fear"%}
+	<h2 style="color:red;">Fear</h2>
+	<img class="u-image u-image-default u-preserve-proportions u-image-3" src="{{ url_for('static', filename='images/download72.jpg') }}" alt="" data-image-width="225" data-image-height="225">
+	{% elif prediction == "joy"%}
+	<h2 style="color:red;">Happy</h2>
+	<img class="u-image u-image-default u-preserve-proportions u-image-3" src="{{ url_for('static', filename='images/download62.jpg') }}" alt="" data-image-width="225" data-image-height="225">
+	{% elif prediction == "surprise"%}
+	<h2 style="color:red;">Surprised</h2>
+	<img class="u-image u-image-default u-preserve-proportions u-image-3" src="{{ url_for('static', filename='images/download52.jpg') }}" alt="" data-image-width="225" data-image-height="225">
+	{% endif %}
+
+	</div>
+
+</body>
+</html>

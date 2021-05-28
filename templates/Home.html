@@ -3,7 +3,7 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="What is Emotion Detection?, About Us, What's your mood?">
+    <meta name="keywords" content="What is Group Psychotherapy?, About Us, What's your mood?">
     <meta name="description" content="">
     <meta name="page_type" content="np-template-header-footer-from-plugin">
     <title>Home</title>
@@ -39,9 +39,8 @@
         <img src="{{ url_for('static', filename='images/gdzrte.jpg') }}"  class="u-align-left u-image u-image-1" data-image-width="1200" data-image-height="800">
         <div class="u-align-left u-container-style u-group u-white u-group-1">
           <div class="u-container-layout u-container-layout-1">
-            <h2 class="u-text u-text-palette-1-base u-text-1">What is Emotion Detection?</h2>
-            <p class="u-text u-text-2">An Emotion Detection Model is an app through which we will be able to get to know about what's going on in people's minds. Our text is the direct representation of what we think and how we feel. Whenever we are stress, our text depicts that in the form of 
-		 uninterestedness in talking or if we are happy we text with excitement using words of happiness. So this model will help to identify people's moods on the basis of their text.</p>
+            <h2 class="u-text u-text-palette-1-base u-text-1">What is Group Psychotherapy?</h2>
+            <p class="u-text u-text-2">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate. </p>
           </div>
         </div>
       </div>
@@ -75,13 +74,12 @@
                     <div class="u-layout-row">
                       <div class="u-align-left u-container-style u-layout-cell u-size-30 u-layout-cell-3">
                         <div class="u-container-layout u-container-layout-3">
-                          <p class="u-text u-text-2">This project is designed by 3 college students: <b>Esha Sachan, Prashasti Gupta and Ruchika Mishra</b>. Human emotion recognition plays an important role in the interpersonal relationship. Emotions are reflected from speech, hand and gestures of the body and through facial expressions. 
-				  Hence extracting and understanding of emotion has a high importance of the interaction between human and machine communication. This lead us to the idea of creating an app for emotion detection.</p>
+                          <p class="u-text u-text-2">Paragraph. Sed molestie tellus eros, sed ultricies nisi egestas ut. Suspendisse id ornare nulla. Vestibulum in condimentum diam, a luctus leo. Sed vel pharetra felis. Nullam eu tincidunt erat. Mauris sit amet venenatis dui. Fusce nulla odio, tristique sit amet malesuada quis, gravida eget nunc. Fusce vulputate vulputate turpis, id scelerisque justo ullamcorper in.</p>
                         </div>
                       </div>
                       <div class="u-align-left u-container-style u-layout-cell u-right-cell u-size-30 u-layout-cell-4">
                         <div class="u-container-layout u-container-layout-4">
-                          <p class="u-text u-text-3">This app can be used in real time in many ways. so hey!! Its very simple and easy to use app. Just type the text in the box and click on the Predict button and get to know about your mood. </p>
+                          <p class="u-text u-text-3">Sed at vestibulum augue. Aenean vel dapibus nisi. Fusce nec odio luctus, bibendum velit a, placerat sapien.&nbsp;Aliquam et sem odio. In ullamcorper nisi nunc, et molestie ipsum iaculis sit amet.&nbsp;In porta nec dolor non consectetur. Duis volutpat euismod neque sed blandit.&nbsp;Curabitur non magna porttitor nulla viverra pretium.</p>
                         </div>
                       </div>
                     </div>
@@ -97,13 +95,13 @@
       <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
         <h2 class="u-text u-text-palette-4-dark-2 u-text-1">What's your mood?</h2>
         <div class="u-form u-form-1">
-          <form action="/predict" method="POST" class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form" style="padding: 10px" source="custom" name="form">
+          <form action="{{ url_for('predict')}}" method="POST" class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form" style="padding: 10px" source="custom" name="form">
             <div class="u-form-group u-form-message">
               <label for="message-3b9a" class="u-form-control-hidden u-label">Message</label>
               <textarea placeholder="Enter your message" rows="4" cols="50" id="message-3b9a" name="message" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required=""></textarea>
             </div>
             <div class="u-align-center u-form-group u-form-submit">
-              <input type="submit" value="predict" >
+              <input type="submit" value="Predict" >
             </div>
           </form>
         </div>
@@ -119,19 +117,19 @@
                   <div class="u-container-style u-layout-cell u-palette-4-light-2 u-size-20 u-layout-cell-1">
                     <div class="u-container-layout u-container-layout-1">
                       <p class="u-text u-text-1">Fear</p>
-                      <img class="u-image u-image-default u-preserve-proportions u-image-1" src="images/download72.jpg" alt="" data-image-width="160" data-image-height="160">
+                      <img class="u-image u-image-default u-preserve-proportions u-image-1" src="{{ url_for('static', filename='images/download72.jpg') }}" alt="" data-image-width="160" data-image-height="160">
                     </div>
                   </div>
                   <div class="u-container-style u-layout-cell u-palette-4-light-2 u-size-20 u-layout-cell-2">
                     <div class="u-container-layout u-container-layout-2">
                       <p class="u-text u-text-2">Happy</p>
-                      <img class="u-image u-image-default u-preserve-proportions u-image-2" src="images/download62.jpg" alt="" data-image-width="225" data-image-height="225">
+                      <img class="u-image u-image-default u-preserve-proportions u-image-2" src="{{ url_for('static', filename='images/download62.jpg') }}" alt="" data-image-width="225" data-image-height="225">
                     </div>
                   </div>
                   <div class="u-container-style u-layout-cell u-palette-4-light-2 u-size-20 u-layout-cell-3">
                     <div class="u-container-layout u-container-layout-3">
                       <p class="u-text u-text-3">Angry</p>
-                      <img class="u-image u-image-default u-preserve-proportions u-image-3" src="images/download10.jpg" alt="" data-image-width="225" data-image-height="225">
+                      <img class="u-image u-image-default u-preserve-proportions u-image-3" src="{{ url_for('static', filename='images/download10.jpg') }}" alt="" data-image-width="225" data-image-height="225">
                     </div>
                   </div>
                 </div>
@@ -141,7 +139,7 @@
                   <div class="u-container-style u-layout-cell u-palette-4-light-2 u-size-20 u-layout-cell-4">
                     <div class="u-container-layout u-container-layout-4">
                       <p class="u-text u-text-4">Love</p>
-                      <img class="u-image u-image-default u-preserve-proportions u-image-4" src="images/download32.jpg" alt="" data-image-width="225" data-image-height="225">
+                      <img class="u-image u-image-default u-preserve-proportions u-image-4" src="{{ url_for('static', filename='images/download32.jpg') }}" alt="" data-image-width="225" data-image-height="225">
                     </div>
                   </div>
                   <div class="u-container-style u-layout-cell u-palette-4-light-2 u-size-20 u-layout-cell-5">
@@ -150,13 +148,13 @@
                         <span style="font-size: 36px;"><b>Sad</b>
                         </span>
                       </p>
-                      <img class="u-image u-image-default u-preserve-proportions u-image-5" src="images/download22.jpg" alt="" data-image-width="225" data-image-height="225">
+                      <img class="u-image u-image-default u-preserve-proportions u-image-5" src="{{ url_for('static', filename='images/download22.jpg') }}" alt="" data-image-width="225" data-image-height="225">
                     </div>
                   </div>
                   <div class="u-container-style u-layout-cell u-palette-4-light-2 u-size-20 u-layout-cell-6">
                     <div class="u-container-layout u-container-layout-6">
                       <p class="u-text u-text-6">Surprise</p>
-                      <img class="u-image u-image-default u-preserve-proportions u-image-6" src="images/download52.jpg" alt="" data-image-width="225" data-image-height="225">
+                      <img class="u-image u-image-default u-preserve-proportions u-image-6" src="{{ url_for('static', filename='images/download52.jpg') }}" alt="" data-image-width="225" data-image-height="225">
                     </div>
                   </div>
                 </div>
@@ -165,7 +163,17 @@
           </div>
         </div>
       </div>
+      </section>
+    <section class="content">
+      <div>
+        <header>
+          {% block header %}{% endblock %}
+        </header>
+        {% block content %}{% endblock %}
+      </div>
+    
     </section>
+    
     
     
     <footer class="u-clearfix u-footer u-palette-1-light-1" id="sec-1e90"><div class="u-clearfix u-sheet u-valign-middle u-sheet-1">

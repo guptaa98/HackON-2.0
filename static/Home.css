@@ -1,3 +1,14 @@
+body {
+}
+.btn-info {
+  background-color: #2196f3;
+  height: 40px;
+  width: 100px;
+} /* Blue */
+.btn-info:hover {
+  background: #0b7dda;
+}
+
 .u-section-1 {
   background-image: none;
 }
@@ -17,7 +28,7 @@
 .u-section-1 .u-image-1 {
   width: 1016px;
   height: 744px;
-  box-shadow: 5px 5px 35px 0 rgba(0,0,0,0.15);
+  box-shadow: 5px 5px 35px 0 rgba(0, 0, 0, 0.15);
   margin: 0 36px 0 auto;
 }
 
@@ -140,7 +151,8 @@
   .u-section-1 .u-text-1 {
     font-size: 1.5rem;
   }
-}.u-section-2 .u-sheet-1 {
+}
+.u-section-2 .u-sheet-1 {
   min-height: 543px;
 }
 
@@ -308,7 +320,8 @@
     margin-right: initial;
     margin-left: initial;
   }
-}.u-section-3 .u-sheet-1 {
+}
+.u-section-3 .u-sheet-1 {
   min-height: 502px;
 }
 
@@ -341,7 +354,8 @@
   .u-section-3 .u-form-1 {
     width: 340px;
   }
-}.u-section-4 .u-sheet-1 {
+}
+.u-section-4 .u-sheet-1 {
   min-height: 797px;
 }
 

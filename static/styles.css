@@ -3,3 +3,10 @@ body {
   padding: 0px;
   background-color: #f4f3f3;
 }
+.resultss {
+  border-radius: 15px 50px;
+  background: #345fe4;
+  padding: 20px;
+  width: 200px;
+  height: 150px;
+}
