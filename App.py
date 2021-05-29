@@ -39,7 +39,7 @@ df = pd.read_csv('format_data_f.csv', header=None, sep = ';', names = ['Input','
 @app.route('/', methods=['GET','POST'])
 def index():
     # Main page
-    return render_template('home2.html')
+    return render_template('home.html')
 
 @app.route('/predict',methods=['GET','POST'])
 def predict():
@@ -70,7 +70,7 @@ def predict():
         
         #my_prediction = model.predict(data_pad)
         print (my_prediction)
-        return render_template('result2.html', prediction = my_prediction)
+        return render_template('index.html', prediction = my_prediction)
 
 
 if __name__ == '__main__':
