@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Emotion Detection</title>
+        <title>ConvoCare</title>
         <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="static/images/img/favicon.ico" />
         <!-- Font Awesome icons (free version)-->
@@ -20,7 +20,7 @@
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
             <div class="container">
-                <a class="navbar-brand" href="#page-top">Emotion Detection</a>
+                <a class="navbar-brand" href="#page-top">ConvoCare</a>
                 <button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     Menu
                     <i class="fas fa-bars"></i>
@@ -41,19 +41,7 @@
 
                 {% if prediction == "anger"%}
                 <img class="masthead-avatar mb-5" src="{{ url_for('static', filename='images/img/download10.jpg') }}" alt="..." />
-                {% elif prediction == "love"%}
-                <img class="masthead-avatar mb-5" src="{{ url_for('static', filename='images/img/download32.jpg') }}" alt="..." />
-                {% elif prediction == "sadness"%}
-                <img class="masthead-avatar mb-5" src="{{ url_for('static', filename='images/img/download22.jpg') }}" alt="..." />
-                {% elif prediction == "fear"%}
-                <img class="masthead-avatar mb-5" src="{{ url_for('static', filename='images/img/download72.jpg') }}" alt="..." />
-                {% elif prediction == "joy"%}
-                <img class="masthead-avatar mb-5" src="{{ url_for('static', filename='images/img/download62.jpg') }}" alt="..." />
-                {% elif prediction == "surprise"%}
-                <img class="masthead-avatar mb-5" src="{{ url_for('static', filename='images/img/download52.jpg') }}" alt="..." />
-                {% endif %}
-                <!-- Masthead Heading-->
-                <h1 class="masthead-heading text-uppercase mb-0">How You Doin'</h1>
+                <h1 class="masthead-heading text-uppercase mb-0">ANGRY</h1>
                 <!-- Icon Divider-->
                 <div class="divider-custom divider-light">
                     <div class="divider-custom-line"></div>
@@ -61,7 +49,69 @@
                     <div class="divider-custom-line"></div>
                 </div>
                 <!-- Masthead Subheading-->
-                <p class="masthead-subheading font-weight-light mb-0">"There is hope, even when your brain tells you there isn’t."</p>
+                <p class="masthead-subheading font-weight-light mb-0">One that angers you, controls you. Don’t give anyone that power! Especially the one who does it intentionally. So calm down friend, it's not worth it.</p>
+                
+                {% elif prediction == "love"%}
+                <img class="masthead-avatar mb-5" src="{{ url_for('static', filename='images/img/download31.jpg') }}" alt="..." />
+                <h1 class="masthead-heading text-uppercase mb-0">LOVE</h1>
+                <!-- Icon Divider-->
+                <div class="divider-custom divider-light">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                    <div class="divider-custom-line"></div>
+                </div>
+                <!-- Masthead Subheading-->
+                <p class="masthead-subheading font-weight-light mb-0">"There is only one happiness in this life, to love and be loved."</p>
+                
+                {% elif prediction == "sadness"%}
+                <img class="masthead-avatar mb-5" src="{{ url_for('static', filename='images/img/download21.jpg') }}" alt="..." />
+                <h1 class="masthead-heading text-uppercase mb-0">SAD</h1>
+                <!-- Icon Divider-->
+                <div class="divider-custom divider-light">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                    <div class="divider-custom-line"></div>
+                </div>
+                <!-- Masthead Subheading-->
+                <p class="masthead-subheading font-weight-light mb-0">You own your feelings. You own your thoughts. You control both. No one has the right to any of it—to any of you without your permission.</p>
+                
+                {% elif prediction == "fear"%}
+                <img class="masthead-avatar mb-5" src="{{ url_for('static', filename='images/img/download71.jpg') }}" alt="..." />
+                <h1 class="masthead-heading text-uppercase mb-0">Fear</h1>
+                <!-- Icon Divider-->
+                <div class="divider-custom divider-light">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                    <div class="divider-custom-line"></div>
+                </div>
+                <!-- Masthead Subheading-->
+                <p class="masthead-subheading font-weight-light mb-0">"Each of us must confront our own fears, must come face to face with them. How we handle our fears will determine where we go with the rest of our lives. To experience adventure or to be limited by the fear of it."</p>
+                
+                {% elif prediction == "joy"%}
+                <img class="masthead-avatar mb-5" src="{{ url_for('static', filename='images/img/download61.jpg') }}" alt="..." />
+                <h1 class="masthead-heading text-uppercase mb-0">JOY</h1>
+                <!-- Icon Divider-->
+                <div class="divider-custom divider-light">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                    <div class="divider-custom-line"></div>
+                </div>
+                <!-- Masthead Subheading-->
+                <p class="masthead-subheading font-weight-light mb-0">I like the way you are!!</p>
+                {% elif prediction == "surprise"%}
+                <img class="masthead-avatar mb-5" src="{{ url_for('static', filename='images/img/download51.jpg') }}" alt="..." />
+                <h1 class="masthead-heading text-uppercase mb-0">SURPRISE</h1>
+                <!-- Icon Divider-->
+                <div class="divider-custom divider-light">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                    <div class="divider-custom-line"></div>
+                </div>
+                <!-- Masthead Subheading-->
+                <p class="masthead-subheading font-weight-light mb-0">Surprise-I am not surprised , I am startled!!</p>
+                {% endif %}
+                <!-- Masthead Heading-->
+                
             </div>
         </header>
         <!-- Portfolio Section-->
@@ -83,7 +133,7 @@
                             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                 <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
                             </div>
-                            <img class="img-fluid" src="static/images/img/portfolio/cabin.jpg" alt="..." />
+                            <img class="img-fluid" src="static/images/img/download10.jpg" alt="..." />
                         </div>
                     </div>
                     <!-- Portfolio Item 2-->
@@ -92,7 +142,7 @@
                             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                 <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
                             </div>
-                            <img class="img-fluid" src="static/images/img/portfolio/cake.jpg" alt="..." />
+                            <img class="img-fluid" src="static/images/img/download21.jpg" alt="..." />
                         </div>
                     </div>
                     <!-- Portfolio Item 3-->
@@ -101,7 +151,7 @@
                             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                 <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
                             </div>
-                            <img class="img-fluid" src="static/images/img/portfolio/circus.jpg" alt="..." />
+                            <img class="img-fluid" src="static/images/img/download31.jpg" alt="..." />
                         </div>
                     </div>
                     <!-- Portfolio Item 4-->
@@ -110,7 +160,7 @@
                             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                 <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
                             </div>
-                            <img class="img-fluid" src="static/images/img/portfolio/game.jpg" alt="..." />
+                            <img class="img-fluid" src="static/images/img/download51.jpg" alt="..." />
                         </div>
                     </div>
                     <!-- Portfolio Item 5-->
@@ -119,7 +169,7 @@
                             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                 <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
                             </div>
-                            <img class="img-fluid" src="static/images/img/portfolio/safe.jpg" alt="..." />
+                            <img class="img-fluid" src="static/images/img/download61.jpg" alt="..." />
                         </div>
                     </div>
                     <!-- Portfolio Item 6-->
@@ -128,7 +178,7 @@
                             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                 <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
                             </div>
-                            <img class="img-fluid" src="static/images/img/portfolio/submarine.jpg" alt="..." />
+                            <img class="img-fluid" src="static/images/img/download71.jpg" alt="..." />
                         </div>
                     </div>
                 </div>
@@ -138,7 +188,7 @@
         <section class="page-section bg-primary text-white mb-0" id="about">
             <div class="container">
                 <!-- About Section Heading-->
-                <h2 class="page-section-heading text-center text-uppercase text-white">About</h2>
+                <h3 class="page-section-heading text-center text-uppercase text-white">Emotional Health Awareness</h3>
                 <!-- Icon Divider-->
                 <div class="divider-custom divider-light">
                     <div class="divider-custom-line"></div>
@@ -147,8 +197,25 @@
                 </div>
                 <!-- About Section Content-->
                 <div class="row">
-                    <div class="col-lg-4 ms-auto"><p class="lead">This project is designed by 3 engineering students: Esha Sachan, Prashasti Gupta and Ruchika Mishra. The main idea behind this is to use technology to know about people's inner feelings based on the texts they use anywhere.</p></div>
-                    <div class="col-lg-4 me-auto"><p class="lead">To know about an emotion of a text simply enter the text in the provided text box and hit predict button.</p></div>
+                    <div class="col-lg-4 ms-auto"><h2>What Is Emotional Health?</h2><p class="lead" style="text-align:justify">Emotional health is one aspect of mental health. It is your ability to cope with both positive and negative emotions, which includes your awareness of them. Emotionally healthy people have good coping mechanisms for negative emotions, and they also know when to reach out to a professional for help.</p></div>
+                    <div class="col-lg-4 me-auto"><h2>When To Check Your Emotional Health</h2><p class="lead"><ul>
+                        <li>Isolating yourself from friends, family, or coworkers</li>
+                        <li>Lower energy than usual</li>
+                        <li>Sleeping too much or too little</li>
+                        <li>Eating too much or too little</li>
+                        <li>Increased use of substances</li>
+                        <li>Racing thoughts</li>
+                    </ul></p></div>
+                    <div class="col-lg-4 me-auto"><h2>How to Work On Your Emotional Health</h2><p class="lead">
+                        <ul>
+                            <li>Stay connected</li>
+                            <li>Meditate</li>
+                            <li>Watch how you talk about yourself.</li>
+                            <li>Set goals and celebrate your achievements. </li>
+                            <li>Use substances in moderation. </li>
+
+                        </ul>
+                    </p>
                 </div>
             </div>
         </section>
