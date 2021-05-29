@@ -38,4 +38,3 @@ seaborn==0.11.1
 tensorflow==2.5.0
 text-hammer==0.1.5
 tqdm==4.41.1
-wasabi==0.8.2
