@@ -9,7 +9,7 @@ Code_over_Chai
 ## Project Name:
 ConvoCare
 ## Title:
-The project helps to get to know about the mood of the people on the basis of the texts they write. It creates better understanding of one's mood and can resolve many problems.
+This is a responsive web app that helps to get to know about the mood of the people on the basis of the texts they write. It creates better understanding of one's mood and can resolve many problems.
 ## Inspiration:
 As it is generally seen that expressing emotions is a difficult task. Some people find it difficult to tell people directly about their problems but sometimes their emotions or moods are reflected in their text through which we could help them in solving their worries. As nowadays people are more closer to technologies and stay connected with each other through messages so this can be used to track their moods and mental states.
 ## Real-time uses:
@@ -27,5 +27,5 @@ As it is generally seen that expressing emotions is a difficult task. Some peopl
 9. Pandas
 10. Numpy
 11. Matplotlib
-12. Seaborne
+12. Seaborn
 13. Keras
