@@ -20,7 +20,11 @@
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
             <div class="container">
-                <a class="navbar-brand" href="#page-top">Emotion Detection</a>
+                <img src="static/images/img/bipolar1.png"
+                   style="height: 100px;
+                   width: 100px;" >
+                <a class="navbar-brand" href="#page-top">ConvoCare </a>
+                
                 <!-- <button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     Menu
                     <i class="fas fa-bars"></i>
@@ -38,9 +42,9 @@
         <header class="masthead bg-primary text-white text-center">
             <div class="container d-flex align-items-center flex-column">
                 <!-- Masthead Avatar Image-->
-                <img class="masthead-avatar mb-5" src="static/images/img/avataaars.svg" alt="..." />
+                <img class="masthead-avatar mb-5" src="static/images/img/4365502.jpg" alt="..." />
                 <!-- Masthead Heading-->
-                <h1 class="masthead-heading text-uppercase mb-0">How You Doin'</h1>
+                <h1 class="masthead-heading text-uppercase mb-0">Welcome to ConvoCare</h1>
                 <!-- Icon Divider-->
                 <div class="divider-custom divider-light">
                     <div class="divider-custom-line"></div>
@@ -55,7 +59,7 @@
         <section class="page-section portfolio" id="portfolio">
             <div class="container">
                 <!-- Portfolio Section Heading-->
-                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Moods predicted here!</h2>
+                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">How You Doin'</h2>
                 <!-- Icon Divider-->
                 <div class="divider-custom">
                     <div class="divider-custom-line"></div>
@@ -118,10 +122,10 @@
                             <img class="img-fluid" src="assets/img/portfolio/submarine.jpg" alt="..." />
                         </div>
                     </div> --> 
-                    <div class="ml-container">
+                    <div class="lead">
 
 		<form action="{{ url_for('predict')}}" method="POST">
-		<p>Let's find out your mood on the basis of your text</p>
+		<h4>Let's find out your mood. Please enter your text.</h4>
 		<!-- <input type="text" name="comment"/> -->
 		<textarea name="message" rows="6" cols="50"></textarea>
 		<br/>
@@ -147,8 +151,8 @@
                 </div>
                 <!-- About Section Content-->
                 <div class="row">
-                    <div class="col-lg-4 ms-auto"><p class="lead">This project is designed by 3 engineering students: Esha Sachan, Prashasti Gupta and Ruchika Mishra. The main idea behind this is to use technology to know about people's inner feelings based on the texts they use anywhere.</p></div>
-                    <div class="col-lg-4 me-auto"><p class="lead">To know about an emotion of a text simply enter the text in the provided text box and hit predict button.</p></div>
+                    <div class="col-lg-4 ms-auto"><p class="lead">This project is designed by 3 engineering students: Esha Sachan, Prashasti Gupta and Ruchika Mishra. The main idea behind ConvoCare is to use technology to know about people's inner feelings based on the texts they use anywhere.</p></div>
+                    <div class="col-lg-4 me-auto"><p class="lead">ConvoCare aims at improving relationships between people ,organizations , customers by analyzing the hidden emotion in the texts for clearer interpretation.This type of sentiment analysis aims to detect emotions, like happiness, frustration, anger, sadness, and so on.</p>
                 </div>
             </div>
         </section>
@@ -180,6 +184,6 @@
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
-        <script src="js/scripts.js"></script>
+        <script src="{{ url_for('static', filename='scripts_result.js') }}"></script>
     </body>
 </html>
