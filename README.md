@@ -13,8 +13,8 @@ The project helps to get to know about the mood of the people on the basis of th
 ## Inspiration:
 As it is generally seen that expressing emotions is a difficult task. Some people find it difficult to tell people directly about their problems but sometimes their emotions or moods are reflected in their text through which we could help them in solving their worries. As nowadays people are more closer to technologies and stay connected with each other through messages so this can be used to track their moods and mental states.
 ## Real-time uses:
-**Online Counselling Sessions:** This model can be used for the patients of mental depression, anxiety or other mental health issues where knowing what's going in people's mind is a very important aspect. It will help to identify the mood of the people or their mental state on the basis of their text more accurately and could be very helpful for the counsellors in their online counselling sessions.
-**Trolling:** Nowadays a lot of hatred is spread on social media platforms in the form of negative comments they write so these can be filtered for example, the comments typed showing anger can be detected and filtered through this model.
+* **Online Counselling Sessions:** This model can be used for the patients of mental depression, anxiety or other mental health issues where knowing what's going in people's mind is a very important aspect. It will help to identify the mood of the people or their mental state on the basis of their text more accurately and could be very helpful for the counsellors in their online counselling sessions.
+* **Trolling:** Nowadays a lot of hatred is spread on social media platforms in the form of negative comments they write so these can be filtered for example, the comments typed showing anger can be detected and filtered through this model.
 ## Technologies Used:
 1. Html
 2. Css
