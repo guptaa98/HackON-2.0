@@ -4,6 +4,7 @@
   - attrs=21.2.0=pyhd3eb1b0_0
   - backcall=0.2.0=pyhd3eb1b0_0
   - blas=1.0=mkl
+  - gunicorn==19.9.0
   - bleach=3.3.0=pyhd3eb1b0_0
   - ca-certificates=2021.4.13=haa95532_1
   - certifi=2020.12.5=py39haa95532_0
