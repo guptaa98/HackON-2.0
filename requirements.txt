@@ -1,7 +1,4 @@
-name: E:\env
-channels:
-  - defaults
-dependencies:
+
   - argon2-cffi=20.1.0=py39h2bbff1b_1
   - async_generator=1.10=pyhd3eb1b0_0
   - attrs=21.2.0=pyhd3eb1b0_0
