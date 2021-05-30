@@ -1,1 +1,1 @@
-heroku ps:scale web=1s
+heroku ps:scale web=1
