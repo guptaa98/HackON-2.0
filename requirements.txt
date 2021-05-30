@@ -10,4 +10,4 @@ text_hammer==0.1.5
 gunicorn
 sklearn
 scikit-learn
-tensorflow
+tensorflow-cpu
