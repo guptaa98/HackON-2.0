@@ -1,10 +1,8 @@
-
   - argon2-cffi=20.1.0=py39h2bbff1b_1
   - async_generator=1.10=pyhd3eb1b0_0
   - attrs=21.2.0=pyhd3eb1b0_0
   - backcall=0.2.0=pyhd3eb1b0_0
   - blas=1.0=mkl
-  - gunicorn==19.9.0
   - bleach=3.3.0=pyhd3eb1b0_0
   - ca-certificates=2021.4.13=haa95532_1
   - certifi=2020.12.5=py39haa95532_0
@@ -132,6 +130,7 @@
     - google-pasta==0.2.0
     - greenlet==1.1.0
     - grpcio==1.34.1
+    - gunicorn==20.1.0
     - h5py==3.1.0
     - html5lib==1.1
     - idna==2.10
